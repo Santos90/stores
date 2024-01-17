@@ -46,7 +46,6 @@ class EditStoreFragment : Fragment() {
 		mActivity = activity as? MainActivity
 
 		mActivity?.supportActionBar?.setDefaultDisplayHomeAsUpEnabled(true)
-		mActivity?.supportActionBar?.title = getString(R.string.edit_store_tittle)
 
 		setHasOptionsMenu(true)
 
@@ -66,6 +65,7 @@ class EditStoreFragment : Fragment() {
 			mBinding.etWebsite.setText(editStore!!.website)
 			mBinding.etPhone.setText(editStore!!.phone)
 			mBinding.etFotoUrl.setText(editStore!!.photoUrl)
+			mActivity?.supportActionBar?.title = getString(R.string.modificar_tienda)
 			/*
 			// Utiliza una coroutine para realizar la operación de base de datos en segundo plano
 			CoroutineScope(Dispatchers.IO).launch {
@@ -81,15 +81,13 @@ class EditStoreFragment : Fragment() {
 			}
 
 			 */
-		}
+		} else mActivity?.supportActionBar?.title = getString(R.string.edit_store_tittle)
 
 	}
 
 	override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
 		inflater.inflate(R.menu.menu_save, menu)
 		super.onCreateOptionsMenu(menu, inflater)
-
-
 	}
 
 	override fun onOptionsItemSelected(item: MenuItem): Boolean {

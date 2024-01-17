@@ -13,4 +13,7 @@ data class StoreEntity (
 	var website: String = "",
 	var photoUrl: String = "",
 	var isFavorite: Boolean = false
-) : Serializable
+) : Serializable {
+
+
+}

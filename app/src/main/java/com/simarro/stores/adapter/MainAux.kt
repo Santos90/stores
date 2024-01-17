@@ -7,5 +7,6 @@ interface MainAux {
 	fun setVisibilityFAB (isVisible : Boolean)
 
 	fun addStore (storeEntity: StoreEntity)
-	abstract fun updateStore(store: StoreEntity)
+	fun updateStore(store: StoreEntity)
+
 }
