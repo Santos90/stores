@@ -93,7 +93,10 @@ class EditStoreFragment : Fragment() {
 	override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
 		return when (item.itemId) {
+			android.R.id.home -> {
 
+				true
+			}
 			android.R.id.home -> {
 
 				mActivity?.onBackPressedDispatcher?.onBackPressed()
@@ -153,7 +156,7 @@ class EditStoreFragment : Fragment() {
 	}
 
 	override fun onDestroy() {
-		mActivity?.supportActionBar?.setDisplayHomeAsUpEnabled(false)
+		mActivity?.supportActionBar?.setDisplayHomeAsUpEnabled(false) //Flecha hacia atras
 		mActivity?.supportActionBar?.title = getString(R.string.app_name)
 		setHasOptionsMenu(false)
 

@@ -44,9 +44,12 @@ android {
 
 dependencies {
 
+	implementation("androidx.preference:preference:1.2.1")
 	var roomVersion = "2.6.1"
 	implementation("androidx.room:room-runtime:$roomVersion")
 	ksp("androidx.room:room-compiler:$roomVersion")
+
+	implementation ("androidx.preference:preference:1.2.0")
 
 	implementation ("com.github.bumptech.glide:glide:4.12.0")
 	annotationProcessor ("com.github.bumptech.glide:compiler:4.12.0")
